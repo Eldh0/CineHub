@@ -4,6 +4,7 @@
     align-items: center;
     padding: 10px 20px;
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
     right: 0;
@@ -20,10 +21,14 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    gap: 15px;
+    gap: 35px;
     font-size: larger;
     font-weight: 500;
     transform: translateX(-10%);
+}
+
+.navbar-links a:hover{
+    text-shadow: 0 0 8px #b0b6f4;
 }
 
 .navbar-links a{
