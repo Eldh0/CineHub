@@ -1,0 +1,57 @@
+.hero-container {
+  background-image:  linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgb(0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 0) 100%
+    ), 
+    url('https://m.media-amazon.com/images/G/31/AmazonVideo/2019/MLP.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  color: white;
+}
+
+.hero-content{
+    padding-left: 60px;
+    text-align: left;
+    width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+.hero-content p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.hero-content .btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+.movie-rental{
+    margin-top: 80px;
+    background-image:  linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgb(0, 0, 0) 50%,
+      rgba(0, 0, 0, 0) 55%,
+      rgba(0, 0, 0, 0) 100%
+    ), 
+    url('https://m.media-amazon.com/images/G/31/AmazonVideo/2021/X-site/MLP/TVOD/TVOD_MLP_Right.jpg');
+}
+
+.subscriptions{
+    color: white;
+    height: 100vh;
+}
