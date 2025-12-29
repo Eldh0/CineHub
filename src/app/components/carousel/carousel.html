@@ -1,58 +1,18 @@
-<div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+<div id="carouselExampleRide" class="carousel slide">
   <div class="carousel-inner">
-
-    <div class="carousel-item active">
+    @for (item of items; track $index){
+    <div class="carousel-item {{ $index == 0 ? 'active':''}}">
       <div class="carousel-img">
-          <img src="https://4kwallpapers.com/images/walls/thumbs_2t/20308.jpg" class="d-block w-100" alt="...">
+          <img src="https://image.tmdb.org/t/p/original{{item.backdrop_path}}" class="d-block w-100" alt="{{item.original_title}} || {{item.name}}">
       </div>
 
       <div class="carousel-content">
-          <h1 class="movie-title">Superman</h1>
+          <h1 class="movie-title">{{item.original_title || item.name}}</h1>
           <a href="">Watch now</a>
       </div>
     </div>
+  }
 
-    <div class="carousel-item">
-      <div class="carousel-img">
-          <img src="https://4kwallpapers.com/images/walls/thumbs_2t/13286.jpeg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-content">
-          <h1 class="movie-title">Spiderman</h1>
-          <a href="">Watch now</a>
-      </div>
-    </div>
-
-
-    <div class="carousel-item">
-      <div class="carousel-img">
-          <img src="https://wallpaperaccess.com/full/543191.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-content">
-          <h1 class="movie-title">Batman</h1>
-          <a href="">Watch now</a>
-      </div>
-    </div>
-
-    <div class="carousel-item ">
-      <div class="carousel-img">
-          <img src="https://wallpaperaccess.com/thumb/716070.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-content">
-          <h1 class="movie-title">Ironman</h1>
-          <a href="">Watch now</a>
-      </div>
-    </div>
-
-    <div class="carousel-item ">
-      <div class="carousel-img">
-          <img src="https://wallpaperaccess.com/thumb/87897.png" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-content">
-          <h1 class="movie-title">Captain America</h1>
-          <a href="">Watch now</a>
-      </div>
-    </div>
-    
   </div>
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
