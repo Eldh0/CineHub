@@ -1,0 +1,32 @@
+.active{
+    display: none;
+}
+
+.card:hover{
+    display: block;
+}
+
+.carousel-container {
+  overflow-x: auto;      
+  overflow-y: hidden;    
+  padding: 1rem 0;       
+  scroll-behavior: smooth; 
+}
+
+.carousel {
+  display: flex;         
+  gap: 1rem;            
+}
+
+.card {
+  flex: 0 0 auto;        
+  width: 200px;          
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
