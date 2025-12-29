@@ -1,11 +1,21 @@
-<!-- <div class="carousel-container">
-  <div class="carousel">
-    @for(any item:items)
-    <a href="">
-      <div class="card">
-      <img [src]="item.image" [alt]="item.name" />
-      <p class="active">{{ item.name }}</p>
-    </div>
-    </a>
+<a (click)="viewMediaDetails(item)">
+<div class="card">
+  <div class="card-image">
+      <img [src]="'https://image.tmdb.org/t/p/w500' + item?.poster_path" 
+           [alt]="item?.title || item?.name" /> 
   </div>
-</div> -->
+
+  <div class="card-content">
+    <h3 class="card-title">{{ item?.title || item?.name }}</h3>
+    
+    <div class="card-meta">
+      <span class="release-date">
+        {{ (item?.release_date || item?.first_air_date) | date:'yyyy' }}
+      </span>
+      <span class="rating">
+        ⭐ {{ item?.vote_average | number:'1.1-1' }}/10
+      </span>
+    </div>
+  </div>
+</div>
+</a>
