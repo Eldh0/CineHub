@@ -1,1 +1,33 @@
 <app-carousel [type]="'tv'"></app-carousel>
+
+<!-- top-rated cards -->
+<h2>Trending TV Shows</h2>
+<div class="cards-container">
+  @for (show of tvItems; track show.id) {
+    <app-card [item]="show"></app-card>
+  }
+</div>
+
+<!-- romance cards -->
+<h2>Romance TV</h2>
+<div class="cards-container">
+    @for (show of romanceTvItems; track show.id) {
+        <app-card [item]="show"></app-card>
+    }
+</div>
+
+<!-- comedy cards -->
+<h2>Comedy TV</h2>
+<div class="cards-container">
+    @for (show of comedyTvItems; track show.id) {
+        <app-card [item]="show"></app-card>
+    }
+</div>
+
+<!-- sci-fic -->
+<h2>Science fiction TV</h2>
+<div class="cards-container">
+    @for (show of sciFiTvItems; track show.id) {
+        <app-card [item]="show"></app-card>
+    }
+</div>
