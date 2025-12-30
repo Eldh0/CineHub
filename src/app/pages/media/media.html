@@ -4,9 +4,9 @@
         <img [src]="'https://image.tmdb.org/t/p/w500' + mediaDetails?.poster_path" [alt]="mediaDetails?.title">
     </div>
     <div class="media-content">
-        <h1 class="media-title">{{mediaDetails?.title}}</h1>
+        <h1 class="media-title">{{mediaDetails?.title || mediaDetails?.name}}</h1>
         <p class="media-description">{{mediaDetails?.overview}}</p>
-        <p class="media-release-date"><strong>Release Date:</strong> {{mediaDetails?.release_date | date}}</p>
+        <p class="media-release-date"><strong>Release Date:</strong> {{mediaDetails?.release_date || mediaDetails?.first_air_date | date}}</p>
         <p class="media-rating"><strong>Rating:</strong> ⭐ {{mediaDetails?.vote_average | number:'1.1-1'}}/10</p>
         <a href="javascript:void(0)">Watch Now</a>
     </div>

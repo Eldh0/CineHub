@@ -18,7 +18,7 @@ export const routes: Routes = [
         component:Shows
     },
     {
-        path:'media/:id',
+        path:'media/:type/:id',
         component:Media
     }
 ];

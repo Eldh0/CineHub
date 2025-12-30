@@ -14,7 +14,7 @@ export class Media implements OnInit {
   constructor(private http:HttpClient,private route:ActivatedRoute, private cdr: ChangeDetectorRef) {}
   ngOnInit() {
     const id=Number(this.route.snapshot.paramMap.get('id'));
-    const type=this.route.snapshot.queryParamMap.get('type') || 'movie';
+    const type=this.route.snapshot.paramMap.get('type') || 'movie';
     this.getMediaDetails(id,type).subscribe((res)=>{
         console.log(res);
         
