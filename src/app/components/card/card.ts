@@ -13,7 +13,8 @@ export class Card {
  @Input() item: any;
   constructor(private router:Router) {}
  viewMediaDetails(item:any) {
-    this.router.navigate(['/media'],{state:{item}});
+    const type =  (item.title ? 'movie' : 'tv');
+    this.router.navigate(['/media',type,item.id]);
   }
 
 }

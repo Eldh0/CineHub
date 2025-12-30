@@ -9,12 +9,12 @@
     <h3 class="card-title">{{ item?.title || item?.name }}</h3>
     
     <div class="card-meta">
-      <span class="release-date">
+      <p class="release-date">
         {{ (item?.release_date || item?.first_air_date) | date:'yyyy' }}
-      </span>
-      <span class="rating">
+      </p>
+      <p class="rating">
         ⭐ {{ item?.vote_average | number:'1.1-1' }}/10
-      </span>
+      </p>
     </div>
   </div>
 </div>

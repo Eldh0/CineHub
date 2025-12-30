@@ -34,3 +34,7 @@ a{
 .card-content {
   padding: 0.7rem 0 1rem 0.5rem;
 }
+
+.card-meta p{
+  margin-bottom: 0.1rem;
+}
